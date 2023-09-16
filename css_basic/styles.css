@@ -1,38 +1,65 @@
-/* styles.css */
-
-/* Apply display: flex to both <body> and <main> */
+/* Apply Flexbox to body and main containers */
 body, main {
     display: flex;
 }
 
-/* Apply flex-direction: column to <body> to create a column layout */
+/* Set the flex direction for body and main containers */
 body {
     flex-direction: column;
 }
 
-/* Apply flex-direction: row to <main> to create a row layout */
 main {
     flex-direction: row;
-    flex: auto; /* Allow <main> to automatically expand to fill available space */
 }
 
-/* Define the proportions for <article> and <aside> */
+/* Ensure main tag has automatic height and width */
+main {
+    flex: auto;
+}
+
+/* Assign 2/3 of the width to article and 1/3 to aside */
 article {
-    flex: 2; /* <article> takes 2/3 of the width */
-    overflow-y: auto; /* Enable vertical scrolling for <article> */
+    flex: 2;
 }
 
 aside {
-    flex: 1; /* <aside> takes 1/3 of the width */
-    overflow-y: auto; /* Enable vertical scrolling for <aside> */
+    flex: 1;
 }
 
-/* Additional styling for better appearance */
+/* Allow scrolling within article and aside */
+article, aside {
+    overflow-y: auto;
+}
+
+.logo {
+    font-size: 24px; /* Adjust the font size to your preference */
+    padding-right: 10px; /* Add some spacing to the right of the logo */
+}
+
+/* Customize header and footer backgrounds */
 header, footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+    background-color: #b68282; /* Change to your desired background color */
+    color: #fff; /* Change to your desired text color */
 }
 
-/* Add any other styles specific to your content as needed */
+/* Customize link colors */
+a {
+    color: #007acc; /* Change to your desired link color */
+}
+
+article {
+    font-family: Arial, sans-serif; /* Change to your desired font */
+    border: 1px solid #ddd; /* Add a border around the article */
+    padding: 20px; /* Add some padding to the article content */
+}
+
+aside a {
+    color: #555; /* Change to your desired link color */
+}
+
+aside a:hover {
+    color: #007acc; /* Change to your desired hover color */
+}
+
+
 
